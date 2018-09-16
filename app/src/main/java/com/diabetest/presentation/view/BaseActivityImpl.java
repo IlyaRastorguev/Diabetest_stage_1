@@ -11,6 +11,12 @@ public class BaseActivityImpl extends AppCompatActivity implements AbstractPrese
 
     private int layoutId;
 
+    public BaseActivityImpl(@NonNull int layoutId) {
+        super();
+
+        this.layoutId = layoutId;
+    }
+
 
     @Override
     protected void onDestroy() {
@@ -29,12 +35,6 @@ public class BaseActivityImpl extends AppCompatActivity implements AbstractPrese
         super.onStart();
 
         setContentView(layoutId);
-    }
-
-    public BaseActivityImpl(@NonNull int layoutId) {
-        super();
-
-        this.layoutId = layoutId;
     }
 
     @Override
