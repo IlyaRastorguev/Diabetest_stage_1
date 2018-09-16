@@ -11,8 +11,10 @@ public class StartActivity extends BaseActivityImpl {
 
     private StartPresenter startPresenter;
 
-    public StartActivity(int layoutId) {
-        super(layoutId);
+    private static final int LAYOUT_ID = R.layout.start_activity;
+
+    public StartActivity() {
+        super(LAYOUT_ID);
 
         startPresenter = new StartPresenter(
                 ThreadExecutorImpl.getExcecutor(),
