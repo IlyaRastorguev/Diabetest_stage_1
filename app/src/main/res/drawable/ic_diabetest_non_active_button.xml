@@ -1,14 +1,23 @@
-<vector android:height="24dp" android:viewportHeight="48"
-    android:viewportWidth="232" android:width="24dp"
-    xmlns:aapt="http://schemas.android.com/aapt" xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillColor="#00000000"
-        android:pathData="M24,1L208,1A23,23 0,0 1,231 24L231,24A23,23 0,0 1,208 47L24,47A23,23 0,0 1,1 24L1,24A23,23 0,0 1,24 1z" android:strokeWidth="2">
-        <aapt:attr name="android:strokeColor">
-            <gradient android:endX="28.1154" android:endY="84.8664"
-                android:startX="10.875" android:startY="3.75" android:type="linear">
-                <item android:color="#FF00BDFF" android:offset="0"/>
-                <item android:color="#FF0075FF" android:offset="1"/>
-            </gradient>
-        </aapt:attr>
-    </path>
-</vector>
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <padding
+                android:bottom="2dp"
+                android:right="2dp"
+                android:left="2dp"
+                android:top="2dp" />
+            <gradient
+                android:startColor="#0075FF"
+                android:endColor="#00BDFF"
+                android:angle="135" />
+            <corners android:radius="100dp" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/whiteText" />
+            <corners android:radius="100dp" />
+        </shape>
+    </item>
+</layer-list>

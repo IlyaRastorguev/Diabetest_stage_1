@@ -1,6 +1,6 @@
 package com.diabetest.domain;
 
-import com.diabetest.domain.interactors.BaseInteractorImpl;
+import com.diabetest.domain.interactors.AbstractInteractor;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -23,13 +23,13 @@ public class ThreadExecutorImpl implements Executor {
     }
 
     @Override
-    public void execute(final BaseInteractorImpl interactor) {
+    public void execute(final AbstractInteractor interactor) {
         threadPoolExecutor.submit(new Runnable() {
             @Override
             public void run() {
                 if (!interactor.isRunning()) interactor.run();
 
-                if (interactor.isOk()) interactor.onFinish();
+                if (interactor.isDone()) interactor.onFinish();
                 else interactor.onError();
 
             }

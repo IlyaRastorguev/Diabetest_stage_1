@@ -1,8 +1,8 @@
 package com.diabetest.domain;
 
-import com.diabetest.domain.interactors.BaseInteractorImpl;
+import com.diabetest.domain.interactors.AbstractInteractor;
 
 public interface Executor {
 
-    void execute(final BaseInteractorImpl interactor);
+    void execute(final AbstractInteractor interactor);
 }

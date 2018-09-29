@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/imageView5"
+        style="@style/Block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editText3"
+            style="@style/Simple.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_user_icon"
+            android:ems="10"
+            android:hint="@string/name_placeholder"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editText"
+            style="@style/Simple.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_mail_icon"
+            android:ems="10"
+            android:hint="@string/email_placeholder"
+            android:inputType="textEmailAddress"
+            android:selectAllOnFocus="true"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/editText2"
+            style="@style/Simple.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_pass_icon"
+            android:ems="10"
+            android:hint="@string/pass_placeholder"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/editText4"
+            style="@style/Simple.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_pass_icon"
+            android:ems="10"
+            android:hint="@string/repeat_pass_placeholder"
+            android:inputType="textPassword" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Active.Button"
+        android:layout_width="232dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/imageView5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-24dp"
+        android:text="@string/singin_action" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/Nonactive.Button"
+        android:layout_width="232dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/by_vk_action" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button2"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/singin_alter_action_ques" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@string/singin_alter_action" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
+</RelativeLayout>

@@ -1,18 +1,28 @@
 package com.diabetest.presentation.presentors;
 
-import android.view.View;
 
 import com.diabetest.domain.Executor;
 import com.diabetest.domain.MainThread;
+import com.diabetest.domain.interactors.AbstractInteractor.CallBack;
+import com.diabetest.domain.interactors.StartInteractor;
+import com.diabetest.domain.repository.LoginRepoImpl;
+import com.diabetest.model.startScreen.StartScreen;
+import com.diabetest.presentation.view.AuthActivity;
+import com.diabetest.presentation.view.StartActivity;
 
-public class StartPresenter extends AbstractPresenter implements BasePresenter {
+public class StartPresenter extends AbstractPresenter<StartActivity, StartScreen> implements BasePresenter, CallBack {
 
-    private BasicView view;
+    @Override
+    public void resolveScreen() {
 
-    public  StartPresenter(Executor executor, MainThread mainThread, BasicView view) {
-        super(executor, mainThread);
+    }
 
-        this.view = view;
+    @Override
+    public void validateField(String value, String pattern, int id) {
+    }
+
+    public StartPresenter(Executor executor, MainThread mainThread, StartActivity view) {
+        super(executor, mainThread, view, new StartScreen());
     }
     @Override
     public void onStart() {
@@ -25,6 +35,16 @@ public class StartPresenter extends AbstractPresenter implements BasePresenter {
     }
 
     @Override
+    public void onNegative() {
+
+    }
+
+    @Override
+    public void onPositive() {
+        getActivity().next(AuthActivity.class, null);
+    }
+
+    @Override
     public void onFinish() {
 
     }
@@ -32,5 +52,12 @@ public class StartPresenter extends AbstractPresenter implements BasePresenter {
     @Override
     public void onCancel() {
 
+    }
+
+    @Override
+    public void onResume() {
+        StartInteractor startInteractor = new StartInteractor(executor, mainThread, this, new LoginRepoImpl());
+
+        startInteractor.run();
     }
 }

@@ -4,7 +4,7 @@ public interface BaseInteractor {
 
     boolean isRunning();
 
-    boolean isOk();
+    boolean isDone();
 
     void onFinish();
 

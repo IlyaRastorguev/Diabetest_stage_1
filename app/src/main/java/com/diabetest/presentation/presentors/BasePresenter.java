@@ -4,10 +4,14 @@ public interface BasePresenter {
 
     void onStart();
 
-    void onError();
-
     void onFinish();
 
     void onCancel();
+
+    void onResume();
+
+    void resolveScreen();
+
+    void validateField(String value, String pattern, int id);
 
 }

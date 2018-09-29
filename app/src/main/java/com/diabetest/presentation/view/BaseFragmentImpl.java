@@ -1,4 +1,6 @@
 package com.diabetest.presentation.view;
 
-public class BaseFragmentImpl {
+import android.support.v4.app.Fragment;
+
+public class BaseFragmentImpl extends Fragment {
 }

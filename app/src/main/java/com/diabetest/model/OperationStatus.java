@@ -1,7 +1,7 @@
 package com.diabetest.model;
 
 public enum OperationStatus {
-    OK,
+    DONE,
     ERROR,
     RUNNING
 }

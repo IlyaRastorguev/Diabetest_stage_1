@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:contentDescription="@string/background_part"
+        android:layout_width="match_parent"
+        android:layout_height="304dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_diabetest_wallpaper"
+        android:scaleType="centerCrop" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="306dp" />
+
+    <TextView
+        android:id="@+id/screen_descr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="198dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/login"
+        android:textColor="@color/whiteText"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:contentDescription="@string/logo_descr"
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:srcCompat="@drawable/ic_diabetest_square_white" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:contentDescription="@string/logo_descr"
+        android:layout_width="56dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:srcCompat="@drawable/ic_diabetest" />
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="395dp"
+        android:layout_height="421dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="257dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/imageView5"
+            style="@style/Block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.diabetest.presentation.view.customViews.CustomStateEditText
+                android:id="@+id/emailField"
+                style="@style/Simple.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/statefull_mail_icon"
+                android:ems="10"
+                android:hint="@string/email_placeholder"
+                android:inputType="textEmailAddress"
+                android:selectAllOnFocus="true"
+                android:singleLine="true" />
+
+            <com.diabetest.presentation.view.customViews.CustomStateEditText
+                android:id="@+id/password"
+                style="@style/Simple.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/statefull_pass_icon"
+                android:ems="10"
+                android:hint="@string/pass_placeholder"
+                android:inputType="textPassword" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+
+        <Button
+            android:id="@+id/button"
+            style="@style/Active.Button"
+            android:layout_width="232dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/imageView5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-24dp"
+            android:text="@string/login_action" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/Nonactive.Button"
+            android:layout_width="232dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/by_vk_action" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button2"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="@string/login_alter_action_ques" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/login_alter_action" />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

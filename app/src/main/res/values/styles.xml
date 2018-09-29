@@ -16,6 +16,68 @@
     <style name="AppTheme.TransparentTheme">
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Simple.EditText" parent="Base.V7.Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/statefull_edit_text_back</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/statefull_text_color</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <style name="Active.EditText" parent="Base.V7.Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/ic_active_edit_text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <style name="Error.EditText" parent="Base.V7.Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/ic_error_edit_text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/redText</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <style name="Success.EditText" parent="Base.V7.Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/ic_success_edit_text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/greenText</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <style name="Active.Button" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/ic_active_button</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/whiteText</item>
+    </style>
+
+    <style name="Nonactive.Button" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/ic_diabetest_non_active_button</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="Block">
+        <item name="android:background">@drawable/block_background</item>
+        <item name="android:paddingBottom">64dp</item>
+        <item name="android:paddingTop">40dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginStart">24dp</item>
     </style>
 
 </resources>

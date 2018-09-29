@@ -4,7 +4,17 @@ import com.diabetest.domain.Executor;
 import com.diabetest.domain.MainThread;
 import com.diabetest.model.OperationStatus;
 
-public abstract class BaseInteractorImpl implements BaseInteractor {
+public abstract class AbstractInteractor implements BaseInteractor {
+
+    public interface CallBack {
+
+        void onNegative();
+
+        void onPositive();
+
+        void onError();
+
+    }
 
     protected Executor executor;
     protected MainThread mThread;
@@ -13,7 +23,7 @@ public abstract class BaseInteractorImpl implements BaseInteractor {
 
     protected volatile OperationStatus operationStatus;
 
-    public BaseInteractorImpl(Executor executor, MainThread mThread) {
+    public AbstractInteractor(Executor executor, MainThread mThread) {
         this.executor = executor;
         this.mThread = mThread;
     }
@@ -30,8 +40,8 @@ public abstract class BaseInteractorImpl implements BaseInteractor {
     }
 
     @Override
-    public boolean isOk() {
-        return operationStatus == OperationStatus.OK;
+    public boolean isDone() {
+        return operationStatus == OperationStatus.DONE;
     }
 
     @Override

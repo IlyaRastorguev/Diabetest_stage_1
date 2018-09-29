@@ -1,4 +1,19 @@
 <resources>
     <string name="app_name">Diabetest</string>
     <string name="main_slogan">for diabetics</string>
+    <string name="logo_descr">логотип</string>
+    <string name="background_part">часть фона</string>
+    <string name="login">Вход</string>
+    <string name="singin">Регистрация</string>
+    <string name="singin_action">Зарегистрироваться</string>
+    <string name="login_action">Войти</string>
+    <string name="login_alter_action_ques">Нет аккаунта?</string>
+    <string name="login_alter_action">Зарегистрируйтесь</string>
+    <string name="singin_alter_action_ques">Уже есть аккаунт?</string>
+    <string name="singin_alter_action">Войдите</string>
+    <string name="by_vk_action">Через Вконтакте</string>
+    <string name="name_placeholder">Введите имя</string>
+    <string name="email_placeholder">Введите email</string>
+    <string name="pass_placeholder">Введите пароль</string>
+    <string name="repeat_pass_placeholder">Повторите пароль</string>
 </resources>
